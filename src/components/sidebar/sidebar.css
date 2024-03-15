@@ -1,0 +1,74 @@
+/* src/components/sidebar/sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #333;
+  transition: transform 0.3s ease;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center options vertically */
+  align-items: center; /* Center options horizontally */
+}
+
+.greeting {
+  margin-bottom: 20px; /* Add margin between greeting and options */
+  display: flex;
+  align-items: center; /* Align items horizontally */
+}
+
+.greeting-text {
+  font-size: 20px; /* Make text bigger */
+  font-weight: bold; /* Make text bolder */
+  color: #fff; /* Set text color to white */
+}
+
+.smile {
+  font-size: 24px; /* Adjust smiley size */
+  margin-left: 5px; /* Add space between text and smiley */
+  color: #fff; /* Set smiley color to white */
+}
+
+.option-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f5f5f6; /* Change background color to blue for buttons */
+  border: 1px solid #000000; /* Matching border color */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Change cursor to pointer */
+  outline: none; /* Remove default outline */
+  margin-bottom: 8px; /* Add margin between buttons */
+  width: 100%; /* Set buttons to fill the width */
+  color: #000; /* Set text color to black */
+}
+
+.option-button:hover {
+  transform: translateY(-3px);
+  background-color: #4fdf5e; /* Darker blue on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .logo {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .option-button {
+    margin-bottom: 10px; /* Increase margin between buttons for smaller screens */
+  }
+}

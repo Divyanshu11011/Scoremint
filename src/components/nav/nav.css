@@ -1,0 +1,62 @@
+/* nav.css */
+.navbar {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-options {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+}
+
+.toggle-sidebar {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none; /* Initially hide the toggle button */
+}
+
+.logout-button-container {
+  margin-right: 20px;
+}
+
+.logout-button {
+  background-color: #ff3d00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .toggle-sidebar {
+    display: block; /* Show toggle button on smaller screens */
+  }
+
+  .brand {
+    display: none; /* Hide brand text on smaller screens */
+  }
+
+  .logout-button {
+    padding: 8px 16px; /* Adjust button size for smaller screens */
+  }
+}
