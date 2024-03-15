@@ -1,11 +1,11 @@
-// src/components/sidebar/Sidebar.js
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link component
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './sidebar.css';
 
-const Sidebar = ({ isOpen, loggedInUserName }) => {
+const Sidebar = ({ isOpen }) => {
+  const [loggedInUserName, setLoggedInUserName] = useState(localStorage.getItem('loggedInUserName'));
+
   const openStreamlitApp = () => {
-    // Open the Streamlit app in a new window
     window.open('https://llmbot-6zxzs4tw2s6eaksgyjgugu.streamlit.app/', '_blank');
   };
 
@@ -13,12 +13,16 @@ const Sidebar = ({ isOpen, loggedInUserName }) => {
     <div className={isOpen ? 'sidebar open' : 'sidebar'}>
       <nav>
         <div className="greeting">
-          <span className="greeting-text">Hi {loggedInUserName}</span>
-          <span role="img" aria-label="Smile" className="smile">😊</span>
+          {loggedInUserName && ( // Show the greeting message only when loggedInUserName is available
+            <>
+              <span className="greeting-text">Hi {loggedInUserName}</span>
+              <span role="img" aria-label="Smile" className="smile">😊</span>
+            </>
+          )}
         </div>
         <button className="option-button"><Link to="/all-students">View all Students</Link></button>
         <button className="option-button"><Link to="/my-mentees">My mentees</Link></button>
-        <button className="option-button" onClick={openStreamlitApp}>MarksheetChat</button> {/* Add onClick handler */}
+        <button className="option-button" onClick={openStreamlitApp}>MarksheetChat</button>
       </nav>
     </div>
   );
