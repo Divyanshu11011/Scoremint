@@ -87,10 +87,9 @@ npm install npm@latest -g
 
 1) Clone the repo.
 2) Make a .env file in root directory with necessary environment variables
-3) run npm install
-4) start the project by running npm start
+3) run ```sh npm install ```
+4) start the project by running  ```sh npm start ```
 
-### Creating A Pull Request
 
 
 
