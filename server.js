@@ -8,9 +8,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 // Middleware to parse JSON bodies
 app.use(express.json());
-app.use(cors({
-    origin: 'http://localhost:3000'
-}));
+app.use(cors());
 
 // MongoDB Atlas connection string
 const uri = 'mongodb+srv://divyanshu1072be21:Harsh%40123@student.4bvhhxl.mongodb.net/';
