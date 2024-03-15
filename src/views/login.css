@@ -45,4 +45,48 @@
     color: #dc3545;
     margin-top: 10px;
   }
-  
+
+/* login.css */
+
+/* Rest of the existing styles */
+
+/* Mentor credentials styling */
+.mentors-info {
+  position: fixed; /* Fixed position */
+  left: 20px; /* Adjust the left position as needed */
+  top: 50%; /* Align to the middle vertically */
+  transform: translateY(-50%); /* Center vertically */
+  background-color: #ff6666; /* Fiery red background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 102, 102, 0.5); /* Fiery red shadow effect */
+  transition: background-color 0.3s; /* Smooth transition on background color change */
+}
+
+.mentors-info:hover {
+  background-color: #000000; /* Lighter fiery red background on hover */
+}
+
+.mentors-info h3 {
+  color: #fff; /* White text color */
+  font-size: 18px; /* Increased font size */
+  margin-bottom: 10px;
+}
+
+.mentors-info ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.mentors-info li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 5px;
+}
+
+.mentors-info li span {
+  display: block;
+  color: #ff3333; /* Fiery red text color */
+  font-size: 16px; /* Font size */
+}

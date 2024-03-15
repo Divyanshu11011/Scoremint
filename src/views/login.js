@@ -8,6 +8,13 @@ const Login = ({ setIsLoggedIn, setLoggedInUserName }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  // Array containing mentor data
+  const mentors = [
+    { Mentorid: "1111", Name: "Prof. Abhay Shukla", Password: "password1" },
+    { Mentorid: "2222", Name: "Prof. Rajesh Kumar", Password: "password2" },
+    { Mentorid: "3333", Name: "Prof. Manisha", Password: "password3" }
+  ];
+
   const handleLogin = async () => {
     // Check credentials against the database
     try {
@@ -41,8 +48,9 @@ const Login = ({ setIsLoggedIn, setLoggedInUserName }) => {
   return (
     <div className="login-container">
       <h2>Hey Mentor</h2>
+
       <div className="input-group">
-        <label>MentorId:</label>
+        <label>Mentor ID:</label>
         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
       </div>
       <div className="input-group">
@@ -51,6 +59,21 @@ const Login = ({ setIsLoggedIn, setLoggedInUserName }) => {
       </div>
       <button className="login-button" onClick={handleLogin}>Login</button>
       {error && <p className="error-message">{error}</p>}
+
+            {/* Display mentor credentials */}
+            <div className="mentors-info">
+        <h3>Mentor Credentials for Testing:</h3>
+        <ul>
+          {mentors.map(mentor => (
+            <li key={mentor.Mentorid}>
+              <span>Mentor ID: {mentor.Mentorid}</span>
+              <span> Password: {mentor.Password}</span>
+              <span> Name: {mentor.Name}</span>
+              
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
