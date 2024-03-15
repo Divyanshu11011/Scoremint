@@ -11,7 +11,7 @@ const Login = ({ setIsLoggedIn, setLoggedInUserName }) => {
   const handleLogin = async () => {
     // Check credentials against the database
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch('https://scoremint.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

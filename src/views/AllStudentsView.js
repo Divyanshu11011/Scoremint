@@ -12,7 +12,7 @@ const AllStudentsView = ({ loggedInUserName }) => {
 
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:5000/allstudents');
+      const response = await fetch('https://scoremint.onrender.com/allstudents');
       if (!response.ok) {
         throw new Error('Failed to fetch students');
       }
@@ -39,7 +39,7 @@ const AllStudentsView = ({ loggedInUserName }) => {
   
       do {
         // Fetch count of mentees assigned to the mentor
-        const countResponse = await axios.get('http://localhost:5000/count-my-mentees');
+        const countResponse = await axios.get('https://scoremint.onrender.com/count-my-mentees');
         count = countResponse.data.count;
   
         if (count + selectedCount > 4) { // Updated validation logic
@@ -48,7 +48,7 @@ const AllStudentsView = ({ loggedInUserName }) => {
         }
   
         // Post request only if the count is within the range
-        const response = await axios.post('http://localhost:5000/pick-mentees', {
+        const response = await axios.post('https://scoremint.onrender.com/pick-mentees', {
           mentorName: loggedInUserName,
           selectedStudents: selectedStudents
         });

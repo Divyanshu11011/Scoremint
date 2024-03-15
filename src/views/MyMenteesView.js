@@ -34,7 +34,7 @@ const MyMenteesView = () => {
     const fetchMentees = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('http://localhost:5000/mymentees');
+        const response = await axios.get('https://scoremint.onrender.com/mymentees');
         if (response.data.success) {
           const menteesData = response.data.mentees.map(mentee => ({
             ...mentee,
@@ -116,7 +116,7 @@ const MyMenteesView = () => {
       const assignedStudentsEmails = mentees.map(mentee => mentee.email);
   
       // Send emails to assigned students
-      const response = await axios.post('http://localhost:5000/send-email', { recipients: assignedStudentsEmails });
+      const response = await axios.post('https://scoremint.onrender.com/send-email', { recipients: assignedStudentsEmails });
       console.log('Emails sent to:', assignedStudentsEmails);
       alert('Emails have been sent to all assigned students.');
     } catch (error) {
@@ -129,7 +129,7 @@ const MyMenteesView = () => {
 
   const handleRemoveMentee = async (menteeId) => {
     try {
-      await axios.post('http://localhost:5000/remove-mentee', { menteeId });
+      await axios.post('https://scoremint.onrender.com/remove-mentee', { menteeId });
       setMentees(mentees.filter(mentee => mentee._id !== menteeId));
     } catch (error) {
       console.error('Error removing mentee:', error);
@@ -173,7 +173,7 @@ const MyMenteesView = () => {
         return;
       }
   
-      await axios.post('http://localhost:5000/update-scores', {
+      await axios.post('https://scoremint.onrender.com/update-scores', {
         menteeId: selectedMentee._id,
         scores: { ...scores, Total_Marks: totalMarks }
       });
@@ -204,7 +204,7 @@ const MyMenteesView = () => {
 
   const handleViewResultClick = async (menteeId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/mentee-scores/${menteeId}`);
+      const response = await axios.get(`https://scoremint.onrender.com/mentee-scores/${menteeId}`);
       setFetchedScores(response.data.scores);
       generateChartData(response.data.scores);
       setShowScoreModal(true);
@@ -221,7 +221,7 @@ const MyMenteesView = () => {
       }
   
       // Fetch the latest mentees data
-      const response = await axios.get('http://localhost:5000/mymentees');
+      const response = await axios.get('https://scoremint.onrender.com/mymentees');
       if (!response.data.success) {
         setError('Failed to fetch mentees');
         return;
@@ -273,7 +273,7 @@ const MyMenteesView = () => {
       const visibleMenteeIds = menteesData.map(mentee => mentee._id);
   
       // Update the isLocked field for visible mentees
-      await axios.post('http://localhost:5000/lock-all-marks', { menteeIds: visibleMenteeIds });
+      await axios.post('https://scoremint.onrender.com/lock-all-marks', { menteeIds: visibleMenteeIds });
   
       // Update the isLocked field in the frontend state for visible mentees
       setMentees(menteesData.map(mentee => (
