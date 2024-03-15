@@ -333,17 +333,19 @@ const MyMenteesView = () => {
         </select>
       </div>
       {!isLoading && filteredMentees.length > 0 && (
-        <button onClick={toggleLockScores}> 
+        <button className="button" onClick={toggleLockScores}> 
           {isLocked ? "Everything is 🔏🔏" : "Lock All Marks"}
         </button>
       )}
+      <div className="buttons-container">
       {!isLoading && filteredMentees.length > 0 && isLocked && (
-        <button onClick={generateMarksheet}>Download Marksheet</button>
+        <button className="button2"  onClick={generateMarksheet}>Download Marksheet</button>
       )}
        {/* Button to send emails to assigned students */}
        {!isLoading && filteredMentees.length > 0 && isLocked && (
-        <button onClick={sendEmailToStudents}>Send Evaluation Completed Emails</button>
+        <button  className="button3" onClick={sendEmailToStudents}>Send Evaluation Completed Emails</button>
       )}
+      </div>
 {error && <p>{error}</p>}
 {isLoading ? (
   <p>Loading...</p>

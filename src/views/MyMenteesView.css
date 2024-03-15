@@ -38,7 +38,7 @@
 
 .table th,
 .table td {
-    padding: 5px;
+    padding: 10px; /* Increase padding for better spacing */
     border: 1px solid #ddd;
     text-align: left;
 }
@@ -59,7 +59,6 @@
     cursor: pointer;
 }
 
-
 /* Define modal styles */
 .modal {
     display: flex;
@@ -71,20 +70,90 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  }
-  
-  /* Define modal content styles */
-  .modal-content {
+}
+
+/* Define modal content styles */
+.modal-content {
     background-color: #fefefe;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Define close button styles */
-  .close {
+}
+
+/* Define close button styles */
+.close {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
-  }
+}
+
+/* Style the buttons */
+.button {
+    padding: 10px 20px; /* Adjust padding for better button appearance */
+    border: none;
+    border-radius: 5px;
+    background-color: #000000; /* Blue background color */
+    color: #fff; /* White text color */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on background color change */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Position the "Download Marksheet" and "Send Email" buttons */
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-button,
+.email-button {
+    margin: 0 10px; /* Adjust margin between buttons */
+}
+
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button2,
+.button3 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545; /* Red background color */
+    color: #fff; /* White text color */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on background color change */
+    margin: 0 10px; /* Adjust margin as needed */
+}
+
+.button2:hover,
+.button3:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+@media (max-width: 768px) {
+    .button,
+    .button2,
+    .button3 {
+        width: 100%; /* Make buttons occupy full width on smaller screens */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+
+    .buttons-container {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    }
+
+    .button2,
+    .button3 {
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
+}

@@ -1,4 +1,5 @@
 /* nav.css */
+
 .navbar {
   background-color: #222;
   color: #fff;
@@ -9,8 +10,9 @@
   right: 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keep the logout button on the right */
   align-items: center;
+  overflow-x: auto; /* Allow horizontal scrolling */
 }
 
 .navbar-options {
@@ -56,7 +58,16 @@
     display: none; /* Hide brand text on smaller screens */
   }
 
+  .logout-button-container {
+    margin-right: 10px; /* Reduce margin for smaller screens */
+  }
+
   .logout-button {
-    padding: 8px 16px; /* Adjust button size for smaller screens */
+    padding: 8px 12px; /* Adjust button size for smaller screens */
+  }
+
+  /* Allow horizontal scrolling */
+  .navbar {
+    overflow-x: auto;
   }
 }
