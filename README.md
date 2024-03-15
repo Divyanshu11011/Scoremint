@@ -1,74 +1,100 @@
+<br/>
+<p align="center">
+  <a href="https://github.com/Divyanshu/Scoremint">
+    <img src="https://i.pinimg.com/736x/85/0a/4c/850a4c6ec16b05958993c168fb26534d.jpg" alt="Logo" width="80" height="80">
+  </a>
 
-# Getting Started with Create React App
+  <h3 align="center">Evaluation Dashboard App - Mentor View
+</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p align="center">
+    Scoring The Fun Way
+    <br/>
+    <br/>
+  </p>
+</p>
 
-## Available Scripts
+![Downloads](https://img.shields.io/github/downloads/Divyanshu/Scoremint/total) ![Contributors](https://img.shields.io/github/contributors/Divyanshu/Scoremint?color=dark-green) 
 
-In the project directory, you can run:
+## Table Of Contents
 
-### `npm start`
+* [About the Project](#about-the-project)
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Authors](#authors)
+* [Acknowledgements](#acknowledgements)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screen Shot](https://beeimg.com/images/h38778241061.png
+)
 
-### `npm test`
+Introduction:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Welcome to the Evaluation Dashboard App - Mentor View! This project offers a comprehensive solution for mentors to evaluate students' performance during a semester-long project in college. In addition to traditional evaluation functionalities, this application integrates innovative features such as AI-driven chat for extracting useful information from uploaded PDF mark sheets and visualizing score data through **Pie Charts**.
 
-### `npm run build`
+Key Features:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Student Assignment Management**: Mentors can add, edit, or remove students for evaluation, ensuring that each mentor can accommodate a minimum of 3 and a maximum of 4 students at a time. The system prevents two mentors from assigning the same student during the evaluation period.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Mark Assignment with Visualization**: Mentors can assign marks to students across different evaluation parameters such as ideation, execution, and viva/pitch. Total marks are calculated and visualized using pie charts for both mentors and mentees to gain insights into student performance.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **AI-Driven Chat for PDF Interaction**: Mentors can upload downloaded PDF mark sheets and engage in AI-driven chat to extract useful information, facilitating efficient evaluation and mentorship.
 
-### `npm run eject`
+4. **Final Submission and Locking**: Mentors can finalize their evaluations by submitting marks, after which they are locked and cannot be edited. Marks submission is only allowed if all students have been assigned marks.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. **Viewing Students and Marks**: A dedicated view page allows mentors to filter students based on whether marks have been assigned or not, providing a clear overview of the evaluation progress.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Additional Features:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Email Notifications**: Upon submission of evaluations, an email notification is sent to all assigned students, informing them that the evaluation process has been completed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Marksheet Generation**: Mentors can generate a marksheet in PDF or document format containing the evaluation details of all assigned students, aiding in record-keeping and sharing.
 
-## Learn More
+3. **Responsive Design**: The frontend of the application is designed as a Single Page Application (SPA) and ensures responsiveness across different devices.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Evaluation Criteria:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Evaluation Dashboard App is meticulously crafted to meet all the basic requirements outlined in the project specifications. Both the frontend and backend components are implemented to fulfill the project requirements, emphasizing database schema design, code modularity, and overall code quality to ensure a robust and maintainable application.
 
-### Code Splitting
+Experience seamless student evaluation management with advanced features tailored for mentor convenience by accessing the Evaluation Dashboard App today!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Built With
 
-### Analyzing the Bundle Size
+Built with:
+- Node.js
+- MongoDB Atlas
+- React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Getting Started
 
-### Making a Progressive Web App
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Prerequisites
 
-### Advanced Configuration
+This is an example of how to list things you need to use the software and how to install them.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* npm
 
-### Deployment
+```sh
+npm install npm@latest -g
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Installation
 
-### `npm run build` fails to minify
+1) Clone the repo.
+2) Make a .env file in root directory with necessary environment variables
+3) run npm install
+4) start the project by running npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Scoremint
->>>>>>> 41a13f7578058dfe57ba0eef4975053a1c4297bd
+### Creating A Pull Request
+
+
+
+## Authors
+
+* **Divyanshu ** - *Comp Sci Student* - [Divyanshu ](https://github.com/Divyanshu11011) - **
+
