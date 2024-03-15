@@ -14,7 +14,7 @@
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/Divyanshu/Scoremint/total) ![Contributors](https://img.shields.io/github/contributors/Divyanshu/Scoremint?color=dark-green) 
+
 
 ## Table Of Contents
 
