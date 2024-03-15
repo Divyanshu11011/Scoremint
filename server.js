@@ -1,8 +1,11 @@
+require('dotenv').config();
+
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const { ObjectId } = require('mongodb');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -10,9 +13,9 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-// MongoDB Atlas connection string
-const uri = 'mongodb+srv://divyanshu1072be21:Harsh%40123@student.4bvhhxl.mongodb.net/';
+const uri = process.env.MONGODB_URI; // Accessing MongoDB URI from environment variable
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
 // Connect to MongoDB Atlas
 async function connectToMongoDB() {
     try {
@@ -162,8 +165,8 @@ async function sendEmailToStudents(recipients) {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'choudhardiv@gmail.com', // Your Gmail email address
-        pass: 'sytrirtyxhgufoyk' // Your Gmail password
+        user: process.env.EMAIL_USER, // Your Gmail email address
+        pass: process.env.EMAIL_PASS // Your Gmail password
       }
     });
 
