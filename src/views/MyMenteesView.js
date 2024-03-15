@@ -29,32 +29,37 @@ const MyMenteesView = () => {
   const [canToggleLock, setCanToggleLock] = useState(true);
   const [isLocked, setIsLocked] = useState(false);
   const [chartData, setChartData] = useState(null);
+   
+
+  // Fetch mentees data
+  const fetchMentees = async () => {
+    setIsLoading(true);
+    try {
+      const response = await axios.get('https://scoremint.onrender.com/mymentees');
+      if (response.data.success) {
+        const menteesData = response.data.mentees.map(mentee => ({
+          ...mentee,
+          marksAssigned: mentee.MarksAssigned ? 'Yes' : 'No' // Initialize marksAssigned based on marksAssigned field
+        }));
+        const allMenteesLocked = menteesData.every(mentee => mentee.isLocked === true);
+        setIsLocked(allMenteesLocked);
+        setMentees(menteesData); // Set mentees state to trigger re-render
+      } else {
+        setError('Failed to fetch mentees');
+      }
+    } catch (error) {
+      setError('Failed to fetch mentees');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
 
   useEffect(() => {
-    const fetchMentees = async () => {
-      setIsLoading(true);
-      try {
-        const response = await axios.get('https://scoremint.onrender.com/mymentees');
-        if (response.data.success) {
-          const menteesData = response.data.mentees.map(mentee => ({
-            ...mentee,
-            marksAssigned: mentee.MarksAssigned ? 'Yes' : 'No' // Initialize marksAssigned based on marksAssigned field
-          }));
-          const allMenteesLocked = menteesData.every(mentee => mentee.isLocked === true);
-          setIsLocked(allMenteesLocked);
-          setMentees(menteesData);
-        } else {
-          setError('Failed to fetch mentees');
-        }
-      } catch (error) {
-        setError('Failed to fetch mentees');
-      } finally {
-        setIsLoading(false);
-      }
-    };
-  
+    
     fetchMentees();
   }, []);
+  
   
 
   const handleFilterChange = (e) => {
@@ -186,6 +191,8 @@ const MyMenteesView = () => {
       return mentee;
     });
     setMentees(updatedMentees);
+
+    fetchMentees();
   
       setScores({
         Ideation: '',
