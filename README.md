@@ -30,6 +30,9 @@
 ![Screen Shot](https://beeimg.com/images/h38778241061.png
 )
 
+![screenshot](https://beeimg.com/images/c54278730123.png
+)
+
 Introduction:
 
 Welcome to the Evaluation Dashboard App - Mentor View! This project offers a comprehensive solution for mentors to evaluate students' performance during a semester-long project in college. In addition to traditional evaluation functionalities, this application integrates innovative features such as AI-driven chat for extracting useful information from uploaded PDF mark sheets and visualizing score data through **Pie Charts**.
