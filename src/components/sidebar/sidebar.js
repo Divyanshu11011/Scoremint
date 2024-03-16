@@ -6,7 +6,7 @@ const Sidebar = ({ isOpen }) => {
   const [loggedInUserName, setLoggedInUserName] = useState(localStorage.getItem('loggedInUserName'));
 
   const openStreamlitApp = () => {
-    window.open('https://llmbot-6zxzs4tw2s6eaksgyjgugu.streamlit.app/', '_blank');
+    window.open('https://scoremintbot-wkbmpykdbstm64wmqug2fn.streamlit.app/', '_blank');
   };
 
   return (
