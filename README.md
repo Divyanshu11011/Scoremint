@@ -30,8 +30,8 @@
 ![Screen Shot](https://beeimg.com/images/h38778241061.png
 )
 
-![screenshot](https://beeimg.com/images/c54278730123.png
-)
+![screenshot](https://beeimg.com/images/t11265943013.png)
+
 
 Introduction:
 
