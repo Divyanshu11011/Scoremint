@@ -372,7 +372,7 @@ const MyMenteesView = () => {
             {isLocked ? (
               <span role="img" aria-label="Locked" style={{ color: 'green' }}>🔒</span>
             ) : (
-              <button onClick={() => handleScoreClick(mentee)} disabled={mentee.marksLocked}>Add Score</button>
+              <button onClick={() => handleScoreClick(mentee)} disabled={mentee.marksLocked}>Add/Update Score</button>
             )}
           </td>
           <td>
